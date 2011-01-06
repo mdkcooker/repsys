@@ -7,11 +7,10 @@
 %define my_py_ver 26
 %endif
 
-Name: repsys
-Version: 1.9.2
-Epoch: 1
+Name: mgarepo
+Version: 1.9.3
 Release: %mkrel 1
-Summary: Tools for Mandriva Linux repository access and management
+Summary: Tools for Mageia repository access and management
 Group: Development/Other
 Source: %{name}-binrepo-svn-%{version}.tar.bz2
 Source1: mdk-rebrand-mdk
@@ -19,27 +18,26 @@ Source2: repsys.conf
 Patch0: repsys.conf.patch
 Patch1: create-srpm-binrepo.patch
 License: GPL
-URL: http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/build_system/repsys/
+URL: http://svn.mageia.org/svn/soft/build_system/mgarepo/
 Requires: python-cheetah subversion openssh-clients python-rpm
 %py_requires -d
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildArch: noarch
 
 %description
-Tools for Mandriva Linux repository access and management.
+Tools for Mageia repository access and management.
 
-<http://wiki.mandriva.com/en/Development/Packaging/RepositorySystem>
-
+It is a fork of repsys :
 <http://wiki.mandriva.com/en/Development/Packaging/Tools/repsys>
 
 
 %package ldap
 Group: Development/Other
-Summary: Repsys plugin to retrieve maintainer information from LDAP
-Requires: repsys >= 1.6.16 python-ldap
+Summary: mgarepo plugin to retrieve maintainer information from LDAP
+Requires: mgarepo >= 1.6.16 python-ldap
 
 %description ldap
-A Repsys plugin that allows retrieving maintainer information shown in
+A mgarepo plugin that allows retrieving maintainer information shown in
 changelogs from a LDAP server. 
 
 See repsys --help-plugin ldapusers for more information. Also see
