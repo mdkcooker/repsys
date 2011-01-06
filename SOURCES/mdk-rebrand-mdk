@@ -1,0 +1,10 @@
+#!/bin/bash
+
+TOPDIR=$1
+SPEC=$2
+REV=$3
+
+# Use svn revision as release
+tac $SPEC | perl -pe '/^\+ [\d-]+ [\d:]+ \((\d+)\)/ && ($r = $1);s/^(Release:).*/$1 ${r}mdk/;' | tac > ${SPEC}.tmp;
+mv -f $SPEC{.tmp,}
+

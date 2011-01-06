@@ -1,0 +1,12 @@
+--- /usr/share/repsys/create-srpm       2010-12-06 14:48:39.200401955 +0100
++++ create-srpm 2010-12-06 14:48:26.166363100 +0100
+@@ -56,6 +56,8 @@
+                          svnlog=1,
+                          revname=1,
+                          scripts=target.scripts, 
++                         use_binrepo = True,
++                         binrepo_check = False,
+                          macros=target.macros)
+                 uploadsrpms.extend(targetsrpms)
+             uploadcmd = get_helper("upload-srpm")
+[
