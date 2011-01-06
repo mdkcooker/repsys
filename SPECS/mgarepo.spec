@@ -57,7 +57,6 @@ python -c "import sys, os, compileall; br='%{buildroot}'; compileall.compile_dir
 mkdir -p %{buildroot}%{_sysconfdir}
 mkdir -p %{buildroot}%{_datadir}/repsys/
 mkdir -p %{buildroot}%{_bindir}/
-install -m 0755 %{SOURCE1} %{buildroot}%{_datadir}/repsys/rebrand-mdk
 install -m 0755 create-srpm %{buildroot}%{_datadir}/repsys/create-srpm
 install -m 0755 repsys-ssh %{buildroot}%{_bindir}/repsys-ssh
 install -m 0644 repsys.conf %{buildroot}%{_sysconfdir}
