@@ -12,11 +12,7 @@ Version: 1.9.3
 Release: %mkrel 1
 Summary: Tools for Mageia repository access and management
 Group: Development/Other
-Source: %{name}-binrepo-svn-%{version}.tar.bz2
-Source1: mdk-rebrand-mdk
-Source2: repsys.conf
-Patch0: repsys.conf.patch
-Patch1: create-srpm-binrepo.patch
+Source: %{name}-%{version}.tar.bz2
 License: GPL
 URL: http://svn.mageia.org/svn/soft/build_system/mgarepo/
 Requires: python-cheetah subversion openssh-clients python-rpm
@@ -44,10 +40,7 @@ See repsys --help-plugin ldapusers for more information. Also see
 http://qa.mandriva.com/show_bug.cgi?id=30549
 
 %prep
-%setup -q -n %{name}-binrepo-svn-%{version}
-%patch0 -p1
-%patch1 -p4
-install -m 0644 %_sourcedir/repsys.conf %_builddir/%name-%version
+%setup -q
 
 %build
 python setup.py build
