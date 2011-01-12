@@ -8,7 +8,7 @@
 %endif
 
 Name: mgarepo
-Version: 1.9.4
+Version: 1.9.5
 Release: %mkrel 1
 Summary: Tools for Mageia repository access and management
 Group: Development/Other
