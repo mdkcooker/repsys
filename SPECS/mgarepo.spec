@@ -10,7 +10,7 @@
 %define Uname MgaRepo
 Name: mgarepo
 Version: 1.9.6
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: Tools for Mageia repository access and management
 Group: Development/Other
 Source: %{name}-%{version}.tar.bz2
