@@ -27,7 +27,6 @@ Tools for Mageia repository access and management.
 It is a fork of repsys :
 <http://wiki.mandriva.com/en/Development/Packaging/Tools/repsys>
 
-
 %package ldap
 Group: Development/Other
 Summary: mgarepo plugin to retrieve maintainer information from LDAP
