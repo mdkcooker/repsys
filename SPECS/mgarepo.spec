@@ -21,7 +21,8 @@ It is a fork of repsys :
 %package ldap
 Group: Development/Other
 Summary: mgarepo plugin to retrieve maintainer information from LDAP
-Requires: mgarepo >= 1.6.16 python-ldap
+Requires: mgarepo >= 1.6.16 
+Requires: python-ldap
 
 %description ldap
 A mgarepo plugin that allows retrieving maintainer information shown in
@@ -63,11 +64,9 @@ rm -rf %{buildroot}
 %{_bindir}/%{name}-ssh
 %{_datadir}/%{name}
 %{_mandir}/*/*
-%{py_puresitedir}/%{Uname}
-%exclude %{py_puresitedir}/%{Uname}/plugins/ldapusers.py*
-%if %my_py_ver >= 25
-%{py_puresitedir}/*.egg-info
-%endif
+%{python_sitelib}/%{Uname}
+%exclude %{python_sitelib}/%{Uname}/plugins/ldapusers.py*
+%{python_sitelib}/*.egg-info
 
 %files ldap
 %doc README.LDAP
