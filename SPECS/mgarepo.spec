@@ -1,12 +1,3 @@
-#
-# please keep this file backportable on the system running on kenobi
-#
-%define my_py_ver %(echo %py_ver | tr -d -c '[:digit:]')
-%if "%my_py_ver" == ""
-# Assume 2.6 if we don't have python at src.rpm creation time
-%define my_py_ver 26
-%endif
-
 %define Uname MgaRepo
 Name: mgarepo
 Version: 1.9.9
@@ -17,7 +8,7 @@ Source: %{name}-%{version}.tar.bz2
 License: GPL
 URL: http://svn.mageia.org/svn/soft/build_system/mgarepo/
 Requires: python-cheetah subversion openssh-clients python-rpm
-%py_requires -d
+Requires: python-devel
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildArch: noarch
 
