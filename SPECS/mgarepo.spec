@@ -70,5 +70,5 @@ rm -rf %{buildroot}
 
 %files ldap
 %doc README.LDAP
-%{py_puresitedir}/%{Uname}/plugins/ldapusers.py*
+%{python_sitelib}/%{Uname}/plugins/ldapusers.py*
 
