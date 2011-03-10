@@ -5,7 +5,7 @@ Release: %mkrel 1
 Summary: Tools for Mageia repository access and management
 Group: Development/Other
 Source: %{name}-%{version}.tar.bz2
-License: GPL
+License: GPLv2+
 URL: http://svn.mageia.org/svn/soft/build_system/mgarepo/
 Requires: python-cheetah subversion openssh-clients python-rpm
 Requires: python-devel
