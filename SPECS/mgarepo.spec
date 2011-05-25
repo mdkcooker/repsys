@@ -1,7 +1,7 @@
 %define Uname MgaRepo
 Name: mgarepo
-Version: 1.9.9
-Release: %mkrel 2
+Version: 1.9.10
+Release: %mkrel 1
 Summary: Tools for Mageia repository access and management
 Group: Development/Other
 Source: http://distrib-coffee.ipsl.jussieu.fr/pub/linux/Mageia/software/%{name}/%{name}-%{version}.tar.bz2
