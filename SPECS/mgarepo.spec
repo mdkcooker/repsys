@@ -1,7 +1,7 @@
 %define Uname MgaRepo
 Name: mgarepo
 Version: 1.10.2
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: Tools for Mageia repository access and management
 Group: Development/Other
 Source: http://distrib-coffee.ipsl.jussieu.fr/pub/linux/Mageia/software/%{name}/%{name}-%{version}.tar.bz2
@@ -11,6 +11,7 @@ Requires: python-cheetah subversion openssh-clients python-rpm
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 BuildArch: noarch
 BuildRequires: python-devel
+Requires: rpm-mageia-setup-build
 Requires: python-httplib2
 Requires: wget
 
