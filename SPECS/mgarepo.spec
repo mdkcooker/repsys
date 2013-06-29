@@ -1,11 +1,10 @@
 %define Uname MgaRepo
 Name: mgarepo
-Version: 1.10.3
-Release: %mkrel 5
+Version: 1.10.4
+Release: %mkrel 1
 Summary: Tools for Mageia repository access and management
 Group: Development/Other
 Source0: %{name}-%{version}.tar.xz
-Source1: mgarepo.completion.sh
 License: GPLv2+
 URL: http://svn.mageia.org/soft/build_system/mgarepo/
 Requires: python-cheetah subversion openssh-clients python-rpm
@@ -51,8 +50,6 @@ python -c "import sys, os, compileall; br='%{buildroot}'; compileall.compile_dir
 mkdir -p %{buildroot}%{_sysconfdir}
 mkdir -p %{buildroot}%{_datadir}/%{name}/
 mkdir -p %{buildroot}%{_bindir}/
-mkdir -p %{buildroot}%{_datadir}/bash-completions/completions
-install -m 0644 %{SOURCE1} %{buildroot}%{_datadir}/bash-completions/completions/%{name}
 install -m 0755 create-srpm %{buildroot}%{_datadir}/%{name}/create-srpm
 install -m 0755 %{name}-ssh %{buildroot}%{_bindir}/%{name}-ssh
 install -m 0644 %{name}.conf %{buildroot}%{_sysconfdir}
@@ -67,7 +64,7 @@ install -m 0644 %{name}.conf %{buildroot}%{_sysconfdir}
 %{python_sitelib}/%{Uname}
 %exclude %{python_sitelib}/%{Uname}/plugins/ldapusers.py*
 %{python_sitelib}/*.egg-info
-%{_datadir}/bash-completions/completions/%{name}
+%{_datadir}/bash-completion/completions/%{name}
 
 %files ldap
 %doc README.LDAP
