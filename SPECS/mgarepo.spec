@@ -4,7 +4,7 @@ Version: 1.10.5
 Release: %mkrel 1
 Summary: Tools for Mageia repository access and management
 Group: Development/Other
-Source0: %{name}-%{version}.tar.xz
+Source0: http://distrib-coffee.ipsl.jussieu.fr/pub/linux/Mageia/software/%{name}/%{version}/%{name}-%{version}.tar.xz
 License: GPLv2+
 URL: http://svn.mageia.org/soft/build_system/mgarepo/
 Requires: python-cheetah subversion openssh-clients python-rpm
