@@ -6,13 +6,14 @@ Summary: Tools for Mageia repository access and management
 Group: Development/Other
 Source0: http://distrib-coffee.ipsl.jussieu.fr/pub/linux/Mageia/software/%{name}/%{version}/%{name}-%{version}.tar.xz
 License: GPLv2+
-URL: http://svn.mageia.org/soft/build_system/mgarepo/
-Requires: python-cheetah subversion openssh-clients python-rpm
+URL: https://wiki.mageia.org/en/Mgarepo
 BuildArch: noarch
-BuildRequires: python-devel
-Requires: rpm-mageia-setup-build
-Requires: python-httplib2
+Requires: openssh-clients
 Requires: python-cheetah
+Requires: python-httplib2
+Requires: python-rpm
+Requires: rpm-mageia-setup-build
+Requires: subversion
 Requires: wget
 
 %description
@@ -35,7 +36,7 @@ See %{name} --help-plugin ldapusers for more information. Also see
 http://qa.mandriva.com/show_bug.cgi?id=30549
 
 %prep
-%setup -q 
+%setup -q
 
 %build
 python setup.py build
