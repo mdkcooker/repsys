@@ -1,7 +1,7 @@
 %define Uname MgaRepo
 Name: mgarepo
 Version: 1.10.7
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: Tools for Mageia repository access and management
 Group: Development/Other
 Source0: http://distrib-coffee.ipsl.jussieu.fr/pub/linux/Mageia/software/%{name}/%{version}/%{name}-%{version}.tar.xz
@@ -20,7 +20,7 @@ Requires: wget
 Tools for Mageia repository access and management.
 
 It is a fork of repsys :
-<http://wiki.mandriva.com/en/Development/Packaging/Tools/repsys>
+<http://archive.openmandriva.org/wiki/en/index.php?title=Repsys>
 
 %package ldap
 Group: Development/Other
@@ -32,8 +32,7 @@ Requires: python-ldap
 A mgarepo plugin that allows retrieving maintainer information shown in
 changelogs from a LDAP server. 
 
-See %{name} --help-plugin ldapusers for more information. Also see
-http://qa.mandriva.com/show_bug.cgi?id=30549
+See %{name} --help-plugin ldapusers for more information.
 
 %prep
 %setup -q
