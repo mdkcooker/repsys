@@ -1,7 +1,7 @@
 %define Uname MgaRepo
 Name: mgarepo
-Version: 1.10.7
-Release: %mkrel 2
+Version: 1.11.0
+Release: %mkrel 1
 Summary: Tools for Mageia repository access and management
 Group: Development/Other
 Source0: http://distrib-coffee.ipsl.jussieu.fr/pub/linux/Mageia/software/%{name}/%{version}/%{name}-%{version}.tar.xz
@@ -9,9 +9,9 @@ License: GPLv2+
 URL: https://wiki.mageia.org/en/Mgarepo
 BuildArch: noarch
 Requires: openssh-clients
-Requires: python-cheetah
-Requires: python-httplib2
-Requires: python-rpm
+#Requires: python-cheetah
+Requires: python3-httplib2
+Requires: python3-rpm
 Requires: rpm-mageia-setup-build
 Requires: subversion
 Requires: wget
@@ -38,14 +38,14 @@ See %{name} --help-plugin ldapusers for more information.
 %setup -q
 
 %build
-python setup.py build
+python3 setup.py build
 
 %install
-python setup.py install --root=%{buildroot}
+python3 setup.py install --root=%{buildroot}
 # Using compile inline since niemeyer's python macros still not available on mdk rpm macros
-find %{buildroot}%{py_puresitedir} -name '*.pyc' -exec rm -f {} \; 
+find %{buildroot}%{py3_puresitedir} -name '*.pyc' -exec rm -f {} \; 
 python -c "import sys, os, compileall; br='%{buildroot}'; compileall.compile_dir(sys.argv[1], ddir=br and 
-(sys.argv[1][len(os.path.abspath(br)):]+'/') or None)" %{buildroot}%{py_sitedir}
+(sys.argv[1][len(os.path.abspath(br)):]+'/') or None)" %{buildroot}%{py3_sitedir}
 
 mkdir -p %{buildroot}%{_sysconfdir}
 mkdir -p %{buildroot}%{_datadir}/%{name}/
@@ -61,12 +61,12 @@ install -m 0644 %{name}.conf %{buildroot}%{_sysconfdir}
 %{_bindir}/%{name}-ssh
 %{_datadir}/%{name}
 %{_mandir}/*/*
-%{python_sitelib}/%{Uname}
-%exclude %{python_sitelib}/%{Uname}/plugins/ldapusers.py*
-%{python_sitelib}/*.egg-info
+%{python3_sitelib}/%{Uname}
+%exclude %{python3_sitelib}/%{Uname}/plugins/ldapusers.py*
+%{python3_sitelib}/*.egg-info
 %{_datadir}/bash-completion/completions/%{name}
 
 %files ldap
 %doc README.LDAP
-%{python_sitelib}/%{Uname}/plugins/ldapusers.py*
+%{python3_sitelib}/%{Uname}/plugins/ldapusers.py*
 
