@@ -1,7 +1,7 @@
 %define Uname MgaRepo
 Name: mgarepo
 Version: 1.11.0
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: Tools for Mageia repository access and management
 Group: Development/Other
 Source0: http://distrib-coffee.ipsl.jussieu.fr/pub/linux/Mageia/software/%{name}/%{version}/%{name}-%{version}.tar.xz
@@ -45,7 +45,7 @@ python3 setup.py build
 python3 setup.py install --root=%{buildroot}
 # Using compile inline since niemeyer's python macros still not available on mdk rpm macros
 find %{buildroot}%{py3_puresitedir} -name '*.pyc' -exec rm -f {} \; 
-python -c "import sys, os, compileall; br='%{buildroot}'; compileall.compile_dir(sys.argv[1], ddir=br and 
+python3 -c "import sys, os, compileall; br='%{buildroot}'; compileall.compile_dir(sys.argv[1], ddir=br and 
 (sys.argv[1][len(os.path.abspath(br)):]+'/') or None)" %{buildroot}%{py3_sitedir}
 
 mkdir -p %{buildroot}%{_sysconfdir}
