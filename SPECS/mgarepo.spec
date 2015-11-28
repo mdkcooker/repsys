@@ -8,6 +8,7 @@ Source0: http://distrib-coffee.ipsl.jussieu.fr/pub/linux/Mageia/software/%{name}
 License: GPLv2+
 URL: https://wiki.mageia.org/en/Mgarepo
 BuildArch: noarch
+BuildRequires:  python3
 Requires: openssh-clients
 #Requires: python-cheetah
 Requires: python3-httplib2
