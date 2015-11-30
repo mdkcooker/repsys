@@ -1,10 +1,10 @@
 %define Uname MgaRepo
 Name: mgarepo
-Version: 1.11.1
+Version: 1.11.2
 Release: %mkrel 1
 Summary: Tools for Mageia repository access and management
 Group: Development/Other
-Source0: http://distrib-coffee.ipsl.jussieu.fr/pub/linux/Mageia/software/%{name}/%{version}/%{name}-%{version}.tar.xz
+Source0: http://gitweb.mageia.org/software/build-system/mgarepo/snapshot/%{name}-%{version}.tar.xz
 License: GPLv2+
 URL: https://wiki.mageia.org/en/Mgarepo
 BuildArch: noarch
