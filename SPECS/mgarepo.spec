@@ -1,9 +1,11 @@
 %define Uname MgaRepo
 Name: mgarepo
-Version: 1.11.3
+Version: 1.11.5
 Release: %mkrel 1
 Summary: Tools for Mageia repository access and management
 Group: Development/Other
+# tarball needs to be created manually if new version has not been tagged yet
+# git clone git://git.mageia.org/software/build-system/mgarepo; cd mgarepo && make dist
 Source0: http://gitweb.mageia.org/software/build-system/mgarepo/snapshot/%{name}-%{version}.tar.xz
 License: GPLv2+
 URL: https://wiki.mageia.org/en/Mgarepo
