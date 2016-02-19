@@ -1,6 +1,6 @@
 %define Uname MgaRepo
 Name: mgarepo
-Version: 1.11.8
+Version: 1.11.9
 Release: %mkrel 1
 Summary: Tools for Mageia repository access and management
 Group: Development/Other
