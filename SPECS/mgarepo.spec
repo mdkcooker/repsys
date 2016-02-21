@@ -2,7 +2,7 @@
 
 Name:		mgarepo
 Version:	1.11.9
-Release:	%mkrel 1
+Release:	%mkrel 2
 Summary:	Tools for Mageia repository access and management
 Group:		Development/Other
 License:	GPLv2+
@@ -11,12 +11,12 @@ URL:		https://wiki.mageia.org/en/Mgarepo
 # git clone git://git.mageia.org/software/build-system/mgarepo; cd mgarepo && make dist
 Source0:	http://gitweb.mageia.org/software/build-system/mgarepo/snapshot/%{name}-%{version}.tar.xz
 BuildArch:	noarch
-BuildRequires:	python3
+BuildRequires:	pkgconfig(python3)
 
 Requires:	openssh-clients
 #Requires:	python-cheetah
-Requires:	python3-httplib2
-Requires:	python3-rpm
+Requires:	pythonegg(3)(httplib2)
+Requires:	pythonegg(3)(rpm-python)
 Requires:	rpm-mageia-setup-build
 Requires:	subversion
 Requires:	wget
@@ -30,8 +30,8 @@ It is a fork of repsys :
 %package	ldap
 Summary:	Mgarepo plug-in to retrieve maintainer information from LDAP
 Group:		Development/Other
-Requires:	mgarepo
-Requires:	python-ldap
+Requires:	%{name} = %{version}
+Requires:	pythonegg(3)(ldap3)
 
 %description	ldap
 A mgarepo plugin that allows retrieving maintainer information shown in
