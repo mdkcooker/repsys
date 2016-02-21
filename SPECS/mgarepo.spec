@@ -1,23 +1,25 @@
-%define Uname MgaRepo
-Name: mgarepo
-Version: 1.11.9
-Release: %mkrel 1
-Summary: Tools for Mageia repository access and management
-Group: Development/Other
+%define Uname	MgaRepo
+
+Name:		mgarepo
+Version:	1.11.9
+Release:	%mkrel 1
+Summary:	Tools for Mageia repository access and management
+Group:		Development/Other
+License:	GPLv2+
+URL:		https://wiki.mageia.org/en/Mgarepo
 # tarball needs to be created manually if new version has not been tagged yet
 # git clone git://git.mageia.org/software/build-system/mgarepo; cd mgarepo && make dist
-Source0: http://gitweb.mageia.org/software/build-system/mgarepo/snapshot/%{name}-%{version}.tar.xz
-License: GPLv2+
-URL: https://wiki.mageia.org/en/Mgarepo
-BuildArch: noarch
-BuildRequires:  python3
-Requires: openssh-clients
-#Requires: python-cheetah
-Requires: python3-httplib2
-Requires: python3-rpm
-Requires: rpm-mageia-setup-build
-Requires: subversion
-Requires: wget
+Source0:	http://gitweb.mageia.org/software/build-system/mgarepo/snapshot/%{name}-%{version}.tar.xz
+BuildArch:	noarch
+BuildRequires:	python3
+
+Requires:	openssh-clients
+#Requires:	python-cheetah
+Requires:	python3-httplib2
+Requires:	python3-rpm
+Requires:	rpm-mageia-setup-build
+Requires:	subversion
+Requires:	wget
 
 %description
 Tools for Mageia repository access and management.
@@ -25,15 +27,15 @@ Tools for Mageia repository access and management.
 It is a fork of repsys :
 <http://archive.openmandriva.org/wiki/en/index.php?title=Repsys>
 
-%package ldap
-Group: Development/Other
-Summary: Mgarepo plug-in to retrieve maintainer information from LDAP
-Requires: mgarepo
-Requires: python-ldap
+%package	ldap
+Summary:	Mgarepo plug-in to retrieve maintainer information from LDAP
+Group:		Development/Other
+Requires:	mgarepo
+Requires:	python-ldap
 
-%description ldap
+%description	ldap
 A mgarepo plugin that allows retrieving maintainer information shown in
-changelogs from a LDAP server. 
+changelogs from a LDAP server.
 
 See %{name} --help-plugin ldapusers for more information.
 
@@ -63,7 +65,7 @@ install -m 0644 %{name}.conf %{buildroot}%{_sysconfdir}
 %{python3_sitelib}/%{Uname}
 %exclude %{python3_sitelib}/%{Uname}/plugins/ldapusers.py*
 %exclude %{python3_sitelib}/%{Uname}/plugins/__pycache__/__init__*
-%exclude %{python3_sitelib}/%{Uname}/plugins/__pycache__/ldapusers* 
+%exclude %{python3_sitelib}/%{Uname}/plugins/__pycache__/ldapusers*
 %{python3_sitelib}/*.egg-info
 %{_datadir}/bash-completion/completions/%{name}
 
@@ -72,4 +74,3 @@ install -m 0644 %{name}.conf %{buildroot}%{_sysconfdir}
 %{python3_sitelib}/%{Uname}/plugins/ldapusers.py*
 %{python3_sitelib}/%{Uname}/plugins/__pycache__/__init__*
 %{python3_sitelib}/%{Uname}/plugins/__pycache__/ldapusers*
-
