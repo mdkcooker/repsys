@@ -1,7 +1,7 @@
 %define Uname	MgaRepo
 
 Name:		mgarepo
-Version:	1.12.3
+Version:	1.13.0
 Release:	%mkrel 1
 Summary:	Tools for Mageia repository access and management
 Group:		Development/Other
@@ -9,14 +9,13 @@ License:	GPLv2+
 URL:		https://wiki.mageia.org/en/Mgarepo
 # tarball needs to be created manually if new version has not been tagged yet
 # git clone git://git.mageia.org/software/build-system/mgarepo; cd mgarepo && make dist
-Source0:	http://gitweb.mageia.org/software/build-system/mgarepo/snapshot/%{name}-%{version}.tar.xz
+#Source0:	http://gitweb.mageia.org/software/build-system/mgarepo/snapshot/%{name}-%{version}.tar.xz
+Source0:	https://github.com/mdkcauldron/%{name}/archive/%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	pkgconfig(python3)
 
 Requires:	openssh-clients
 #Requires:	python-cheetah
-Requires:	pythonegg(3)(httplib2)
-Requires:	pythonegg(3)(rpm-python)
 Requires:	rpm-mageia-setup-build
 Requires:	subversion
 Requires:	wget
