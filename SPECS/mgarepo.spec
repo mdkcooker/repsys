@@ -10,7 +10,7 @@ URL:		https://wiki.mageia.org/en/Mgarepo
 # tarball needs to be created manually if new version has not been tagged yet
 # git clone git://git.mageia.org/software/build-system/mgarepo; cd mgarepo && make dist
 #Source0:	http://gitweb.mageia.org/software/build-system/mgarepo/snapshot/%{name}-%{version}.tar.xz
-Source0:	https://github.com/mdkcauldron/%{name}/archive/%{version}.tar.gz
+Source0:	https://github.com/DrakXtools/%{name}/archive/%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	pkgconfig(python3)
 
