@@ -3,7 +3,7 @@
 Name:		repsys
 Version:	1.14.0
 Release:	%mkrel 1
-Summary:	Tools for Mageia repository access and management
+Summary:	Tools for repository access and management for Mandrake Linux derived distros
 Group:		Development/Other
 License:	GPLv2+
 URL:		https://wiki.mageia.org/en/Mgarepo
