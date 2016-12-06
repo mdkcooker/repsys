@@ -11,6 +11,7 @@ Source0:	https://github.com/DrakXtools/%{name}/archive/%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	pkgconfig(python3)
 
+Requires:	git-svn
 Requires:	openssh-clients
 #Requires:	python-cheetah
 Requires:	rpm-mageia-setup-build
