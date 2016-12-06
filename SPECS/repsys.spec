@@ -3,6 +3,7 @@
 Name:		repsys
 Version:	1.14.1
 Release:	%mkrel 1
+Epoch:		1
 Summary:	Tools for repository access and management for Mandrake Linux derived distros
 Group:		Development/Other
 License:	GPLv2+
@@ -27,7 +28,7 @@ http://archive.openmandriva.org/wiki/en/index.php?title=Repsys
 %package	ldap
 Summary:	%{Uname} plug-in to retrieve maintainer information from LDAP
 Group:		Development/Other
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{EVRD}
 Requires:	pythonegg(3)(ldap3)
 
 %description	ldap
