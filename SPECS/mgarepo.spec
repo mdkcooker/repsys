@@ -1,15 +1,12 @@
-%define Uname	MgaRepo
+%define Uname	RepSys
 
-Name:		mgarepo
-Version:	1.13.4
+Name:		repsys
+Version:	1.14.0
 Release:	%mkrel 1
 Summary:	Tools for Mageia repository access and management
 Group:		Development/Other
 License:	GPLv2+
 URL:		https://wiki.mageia.org/en/Mgarepo
-# tarball needs to be created manually if new version has not been tagged yet
-# git clone git://git.mageia.org/software/build-system/mgarepo; cd mgarepo && make dist
-#Source0:	http://gitweb.mageia.org/software/build-system/mgarepo/snapshot/%{name}-%{version}.tar.xz
 Source0:	https://github.com/DrakXtools/%{name}/archive/%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	pkgconfig(python3)
@@ -21,19 +18,19 @@ Requires:	subversion
 Requires:	wget
 
 %description
-Tools for Mageia repository access and management.
+Tools for repository access and management for Mandrake Linux derived distros.
 
-It is a fork of repsys :
-<http://archive.openmandriva.org/wiki/en/index.php?title=Repsys>
+Original wiki page for available at:
+http://archive.openmandriva.org/wiki/en/index.php?title=Repsys
 
 %package	ldap
-Summary:	Mgarepo plug-in to retrieve maintainer information from LDAP
+Summary:	%{Uname} plug-in to retrieve maintainer information from LDAP
 Group:		Development/Other
 Requires:	%{name} = %{version}
 Requires:	pythonegg(3)(ldap3)
 
 %description	ldap
-A mgarepo plugin that allows retrieving maintainer information shown in
+A repsys plugin that allows retrieving maintainer information shown in
 changelogs from a LDAP server.
 
 See %{name} --help-plugin ldapusers for more information.
