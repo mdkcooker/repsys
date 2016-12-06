@@ -1,7 +1,7 @@
 %define Uname	RepSys
 
 Name:		repsys
-Version:	1.14.0
+Version:	1.14.1
 Release:	%mkrel 1
 Summary:	Tools for repository access and management for Mandrake Linux derived distros
 Group:		Development/Other
