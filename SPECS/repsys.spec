@@ -44,13 +44,6 @@ See %{name} --help-plugin ldapusers for more information.
 %install
 %py3_install
 
-mkdir -p %{buildroot}%{_sysconfdir}
-mkdir -p %{buildroot}%{_datadir}/%{name}/
-mkdir -p %{buildroot}%{_bindir}/
-install -m 0755 create-srpm %{buildroot}%{_datadir}/%{name}/create-srpm
-install -m 0755 %{name}-ssh %{buildroot}%{_bindir}/%{name}-ssh
-install -m 0644 %{name}.conf %{buildroot}%{_sysconfdir}
-
 %files
 %doc CHANGES %{name}-example.conf
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/%{name}.conf
